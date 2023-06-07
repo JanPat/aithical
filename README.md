@@ -7,13 +7,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 
-### `yarn start`
+### `npm run build`
 
-Starts the frontend.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `yarn start-api`
-
-Starts the backend.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
 ### `npm start`
 
@@ -23,13 +23,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run build`
+### `yarn start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Starts the frontend.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn start-api`
+
+Starts the backend.
+
 
 
 

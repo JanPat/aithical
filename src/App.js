@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+
   const [currentTime, setCurrentTime] = useState(0);
   console.log(currentTime)
 
@@ -12,24 +14,12 @@ function App() {
     });
   }, []);
 
+
+
   return (
     <div className="App">
       <header className="App-header">
 
-
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Janvi.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>The current time is {currentTime}.</p>
 
 
 
@@ -81,7 +71,7 @@ function App() {
           <h1>Regulations</h1>
           <div class="report_container">
             <div class="container_blob">
-                <p class="blog_title">The Traffic Safety Amendment Act, 2020</p>
+                <p class="blog_title">The {currentTime}</p>
                 <p>
                   These amendments appear to be intended to create a regulatory framework to give the provincial administrator the authority to issue vehicle permits for the operation of autonomous vehicles.
 

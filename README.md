@@ -9,11 +9,11 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Starts the frontend.\
+Starts the frontend.
 
 ### `yarn start-api`
 
-Starts the frontend.\
+Starts the frontend.
 
 ### `npm start`
 

@@ -6,6 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+
+### `yarn start`
+
+Starts the frontend.\
+
+### `yarn start-api`
+
+Starts the frontend.\
+
 ### `npm start`
 
 Runs the app in the development mode.\

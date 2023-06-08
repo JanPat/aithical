@@ -17,132 +17,123 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
 
-
-
-
-        <div id="root"></div>
+    <body>
     <div class="header">
-      <div class="header_menu">
 
+      <div class="inner_header">
+
+
+        <a href="index.html" class="header_img"
+          ><img
+            src="https://live.staticflickr.com/65535/50142685812_4b909c1871_o.png"
+        /></a>
+
+
+        <a href="submit.html" class="header_link">Submit</a>
+        <a href="incidents.html" class="header_link header_page">Incidents</a>
+        <a href="statistics.html" class="header_link">Statistics</a>
+        <a href="support.html" class="donate_btn">Support</a>
+        <div class="header_spacer"></div>
+        <a href="about.html" class="header_link">About</a>
+        <a href="connect.html" class="header_link">Connect</a>
       </div>
-      <div class="header_content">
-        <h1>@ username/Project Analysis</h1>
+
+      <div class="menu_header">
+        <a href="index.html" class="header_img"
+          ><img
+            src="https://live.staticflickr.com/65535/50142685812_4b909c1871_o.png"
+        /></a>
+        <img
+          onclick="show_function()"
+          class="hamburger"
+          src="https://live.staticflickr.com/65535/50167835143_4d3b56d21c_o.png"
+        />
       </div>
-      
     </div>
-    <div class="sidebar">
-      <p>
-        ICON<br/>
-        analysis
-      </p>
-      <p>
-        ICON<br/>
-        about
-      </p>
-      <p>
-        ICON<br/>
-        0-shot
-      </p>
+    <div class="menu_dropdown" id="menu_dropdown">
+      <a href="index.html">
+        <h1>
+          Home
+        </h1>
+      </a>
+      <a href="submit.html">
+        <h1>
+          Submit
+        </h1>
+      </a>
+      <a href="incidents.html">
+        <h1>
+          Incidents
+        </h1>
+      </a>
+      <a href="statistics.html">
+        <h1>
+          Statistics
+        </h1>
+      </a>
+      <a href="about.html">
+        <h1>
+          About
+        </h1>
+      </a>
+      <a href="connect.html">
+        <h1>
+          Connect
+        </h1>
+      </a>
+      <a href="support.html">
+        <h1>
+          Support
+        </h1>
+      </a>
+
+      <div class="mob0"></div>
     </div>
-    <div class="project_report_body">
-      <div>
-       
-        <div class="report_inputs">
-          <div class="report_inputs_inner">
-            <h1>Project Description:</h1>
-
-            <textarea
-              id="project_description_input"
-              name="project_description_input"
-              rows="4"
-              cols="1"
-              placeholder="Project Description">
-            </textarea>
-        
-            <button id="description_submit" onClick="submit_description()">Submit Description</button>
-          </div>
-        </div>
-
-        <br/>
-        <div id="regulations_container">
-          <h1>Regulations</h1>
-          <div class="report_container">
-            <div class="container_blob">
-                <p class="blog_title">The {currentTime}</p>
-                <p>
-                  These amendments appear to be intended to create a regulatory framework to give the provincial administrator the authority to issue vehicle permits for the operation of autonomous vehicles.
-
-Of note, these amendments require that drivers be in the driver's seat and at the controls of the AV, which would preclude level 5 automation (fully automated) where the vehicle does not contain any driver controls.
-
-Further, to minimize the mischief that can occur with automated technology, Saskatchewan's amendments contain broad provisions intended to prevent interference or obstruction of AVs by third parties.
-                </p>
-                <a href="google.ca">Read More</a>
-            </div>
-            <div class="container_blob">
-                <p class="blog_title">The Vehicle Technology Testing Act</p>
-
-<p>
-
-  This Bill amends The Highway Traffic Act, The Insurance Act and The Manitoba Public Insurance Corporation Act to allow for the testing of vehicles with automated driving systems or other new technology.
-
-Under a technology testing permit, a vehicle or a new vehicle technology can be exempted from certain highway traffic law requirements.
-
-A vehicle operated under such a permit may also be exempted from being insured through Manitoba Public Insurance. MPI may recover from the permit holder the costs of property damage and personal injury benefits paid out as a result of an at-fault accident caused by the vehicle.
-
-</p>                <a href="google.ca">Read More</a>
-            </div>
-            <div class="container_blob">
-                <p class="blog_title">O. Reg. 306/15: Pilot Project - Automated Vehicles</p>
-
-<p>
-  Ontario's regulation contains extensive guidance on AV use and tasks, while also providing clarity by defining what constitutes an "advanced driver assistance system" or a "dynamic driving task." 
-
-In 2019, Ontario introduced important amendments to its pilot project regulatory framework. 
-As part of these amendments, the province moved to open the way to public use of level 3 AVs and permit driverless testing of levels 4 and 5 AVs, along with co-operative truck platooning.
-</p>
-                <a href="google.ca">Read More</a>
+    <div class="content">
+      <div class="incidents_top">
+        <h1 class="top_title">
+          View Incidents
+        </h1>
+        <div class="top_search">
+          <div class="inner_form search_form">
+            <input
+              type="text"
+              id="incident_search"
+              placeholder="Search through our database"
+              onkeydown="if (event.keyCode == 13)
+                        document.getElementById('search_button').click()"
+            />
+            <div id="search_button" onclick="search_incidents();">
+              Search
             </div>
           </div>
         </div>
-
-        <div id="guildelines_container">
-          <h1>Guidelines</h1>
-          <div class="report_container">
-            <div class="container_blob">
-                <p class="blog_title">Blob Title</p>
-                <p>Blob Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nisi ac felis ultrices iaculis sed a ligula. Curabitur tincidunt nisl ut nunc semper iaculis.</p>
-                <a href="google.ca">Read More</a>
+      </div>
+      <div class="incidents_container" id="in_container">
+        <div class="incidents_item">
+            <h2>{currentTime}</h2>
+            <p>Description Description Description</p>
+            <div class="btn_row">
+            <div class="read_btns" id="b_id">Read Report</div>
             </div>
-            <div class="container_blob">
-                <p class="blog_title">Blob Title</p>
-                <p>Blob Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nisi ac felis ultrices iaculis sed a ligula. Curabitur tincidunt nisl ut nunc semper iaculis.</p>
-                <a href="google.ca">Read More</a>
-            </div>
-            <div class="container_blob">
-                <p class="blog_title">Blob Title</p>
-                <p>Blob Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nisi ac felis ultrices iaculis sed a ligula. Curabitur tincidunt nisl ut nunc semper iaculis.</p>
-                <a href="google.ca">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div id="experts_container">
-          <h1>Experts</h1>
-          <div class="report_container">
-            
-          </div>
         </div>
 
       </div>
+      <div class="see_more_div mob6" onclick="show_report_grid(6, -1)">
+        See More Reports
+      </div>
     </div>
-
-
-
-      </header>
+    <div data-loading>
+      <h2>janvi</h2>
+      <span> <span></span> </span>
+      <span> <span></span> </span>
     </div>
+    <div class="fadeout_container" id="fadeout_container">
+      <div class="fadeout"></div>
+    </div>
+  </body>
+
   );
 }
 

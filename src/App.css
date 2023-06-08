@@ -760,67 +760,7 @@ body {
   color: inherit;
 }
 /*
-[data-loading] {
-  position: fixed;
-  display: block;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  height: 100vh;
-}
-[data-loading] > * {
-  display: block;
-  position: absolute;
-  width: 50vw;
-  height: 100vh;
-  overflow: hidden;
-}
 
-[data-loading] > *:first-child {
-  top: 0;
-  left: 0;
-  background: #0081cf;
-}
-[data-loading] > *:last-child {
-  bottom: 0;
-  right: 0;
-  transform: rotate(180deg);
-  background: #e8eb02;
-}
-
-[data-loading] > * > * {
-  display: block;
-  position: absolute;
-  width: 10vh;
-  height: 10vh;
-  top: 45vh;
-  right: 0;
-  background: #e8eb02; 
-}
-[data-loading] > *:last-child > * {
-  background: #0081cf; 
-}
-
-[data-loading="complete"] {
-  animation: close 0s forwards;
-  animation-delay: 6.95s;
-}
-[data-loading="complete"] > * {
-  animation: open 1.5s forwards;
-  animation-delay: 5.95s;
-}
-
-.fadeout_container {
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .fadeout {
   background-color: #ffffff;

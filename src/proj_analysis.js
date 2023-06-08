@@ -179,18 +179,10 @@ export function Project_Analysis_Regulations_Guidelines(){
   
   
         </div>
-        <div class="see_more_div mob6" onclick="show_report_grid(6, -1)">
-          See More Reports
-        </div>
+
       </div>
-      <div data-loading>
-        <h2>janvi</h2>
-        <span> <span></span> </span>
-        <span> <span></span> </span>
-      </div>
-      <div class="fadeout_container" id="fadeout_container">
-        <div class="fadeout"></div>
-      </div>
+
+
     </body>
     )
   }

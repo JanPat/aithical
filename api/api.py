@@ -19,6 +19,12 @@ def get_output_dict():
                 'summary' : "regulation_2_description",
                 'link' : "regulation_2_link",
                 'source': "regulation_2_source"
+            },
+            {
+                'title' : "regulation_3",
+                'summary' : "regulation_3_description",
+                'link' : "regulation_3_link",
+                'source': "regulation_3_source"
             }
         ],
         'guidelines': [

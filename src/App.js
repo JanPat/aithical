@@ -96,14 +96,13 @@ function App() {
 
         <a href="index.html" class="header_img"
           ><img
-            src="https://live.staticflickr.com/65535/50142685812_4b909c1871_o.png"
+            src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg"
         /></a>
 
 
-        <a href="submit.html" class="header_link">Submit</a>
-        <a href="incidents.html" class="header_link header_page">Incidents</a>
-        <a href="statistics.html" class="header_link">Statistics</a>
-        <a href="support.html" class="donate_btn">Support</a>
+        
+        <a href="incidents.html" class="header_link header_page">Regulations and Guidelines</a>
+        <a href="submit.html" class="header_link">Fairness Metrics</a>
         <div class="header_spacer"></div>
         <a href="about.html" class="header_link">About</a>
         <a href="connect.html" class="header_link">Connect</a>
@@ -112,7 +111,7 @@ function App() {
       <div class="menu_header">
         <a href="index.html" class="header_img"
           ><img
-            src="https://live.staticflickr.com/65535/50142685812_4b909c1871_o.png"
+            src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg"
         /></a>
         <img
           onclick="show_function()"
@@ -163,19 +162,24 @@ function App() {
     <div class="content">
       <div class="incidents_top">
         <h1 class="top_title">
-          View Incidents
+          Project Analysis
         </h1>
         <div class="top_search">
           <div class="inner_form search_form">
-            <input
+
+            <textarea
+              name="project_description_input"
+              rows="3"
+              cols="1"
               type="text"
               id="incident_search"
-              placeholder="Search through our database"
+              placeholder="Enter your project description"
               onkeydown="if (event.keyCode == 13)
-                        document.getElementById('search_button').click()"
-            />
+                        document.getElementById('search_button').click()">
+            </textarea>
             <div id="search_button" onclick="search_incidents();">
-              Search
+
+              Submit
             </div>
           </div>
         </div>

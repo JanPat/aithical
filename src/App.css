@@ -261,7 +261,7 @@ body {
   border: none;
   background-color: rgb(20, 82, 120, 0.15);
   color: #545454;
-  font-size: 0.9em;
+  font-size: 0.5em;
   padding: 0.3em;
   padding-right: 0.5em;
   font-family: "Avenir", Helvetica, sans-serif;
@@ -1037,11 +1037,12 @@ body {
 .search_form {
   justify-content: center;
 }
-.search_form input {
+.search_form textarea {
   margin: 0;
   margin-left: 2vh;
   margin-right: 2vh;
   width: 80%;
+  resize: none;
 }
 #search_button {
   height: 1em;
@@ -1315,12 +1316,12 @@ svg > g > g:last-child {
     align-items: center;
   }
 
-  .search_form input {
+  .search_form textarea {
     margin: 0;
     margin-left: 2vh;
     margin-right: 2vh;
     width: 100%;
-    font-size: 0.7em;
+    resize: none;
   }
 
   .back_to_incident,

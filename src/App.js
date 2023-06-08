@@ -5,14 +5,24 @@ import './App.css';
 function App() {
 
 
-  const [currentTime, setCurrentTime] = useState(0);
-  console.log(currentTime)
+
+  // create this so that it does it for x containers
+  
+  const [title_1, set_title] = useState(0);
+  const [summary_1, set_summary] = useState(0);
+  console.log(title_1)
+  console.log(summary_1)
 
   useEffect(() => {
-    fetch('/api/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
+    fetch('/api/output_dict')
+    .then(response => response.json())
+    .then(data => {
+      set_title(data.title);
+      set_summary(data.summary);
     });
   }, []);
+
+
 
 
 
@@ -112,8 +122,8 @@ function App() {
       </div>
       <div class="incidents_container" id="in_container">
         <div class="incidents_item">
-            <h2>{currentTime}</h2>
-            <p>Description Description Description</p>
+            <h2>{title_1}</h2>
+            <p>{summary_1}</p>
             <div class="btn_row">
             <div class="read_btns" id="b_id">Read Report</div>
             </div>

@@ -3,10 +3,12 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/api/time')
+@app.route('/api/output_dict')
 def get_current_time():
-    return {'time': time.time()}
+    return {
+        'title': "Sample Title",
+        'summary': "sample summary bla bla bla bla"
+        }
 
 # main() -- put all other functions in the backend folder - also rename main()
-
 

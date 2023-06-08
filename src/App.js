@@ -7,7 +7,7 @@ function App() {
 
 
   // create this so that it does it for x containers
-  
+
   const [title_1, set_title] = useState(0);
   const [summary_1, set_summary] = useState(0);
   console.log(title_1)
@@ -17,8 +17,68 @@ function App() {
     fetch('/api/output_dict')
     .then(response => response.json())
     .then(data => {
-      set_title(data.title);
-      set_summary(data.summary);
+
+      let number_regulations, reports_shuffled;
+
+      number_regulations = data.regulations.length
+
+      reports_shuffled = data.regulations
+
+      var incidents_container = document.getElementById("in_container");
+      incidents_container.innerHTML = "";
+
+      for (var i = 0; i < number_regulations; i++) {
+        /*
+          for each report from the start of reports_shuffled
+          to the grid_size, make incidents_item with each
+          story and a button that leads them to see the full
+          thing
+        */
+    
+        var incidents_item = document.createElement("div");
+        incidents_item.classList.add("incidents_item");
+    
+        var header = document.createElement("h2");
+    
+        var header_txt = document.createTextNode(reports_shuffled[i].title);
+    
+        header.appendChild(header_txt);
+    
+        var char_length = Math.round(
+          0.00015085686700459 * (window.innerWidth * window.innerHeight) + 148.6
+        );
+        var shortened =
+          reports_shuffled[i].summary;//.slice(0, char_length) + "...";
+    
+        var paragraph = document.createElement("p");
+        var paragraph_txt = document.createTextNode(shortened);
+        paragraph.appendChild(paragraph_txt);
+    
+        var btn_row = document.createElement("div");
+        btn_row.classList.add("btn_row");
+        var btn_r = document.createElement("div");
+        btn_r.id = "b" + i.toString();
+        btn_row.appendChild(btn_r);
+    
+        incidents_item.appendChild(header);
+        incidents_item.appendChild(paragraph);
+        incidents_item.appendChild(btn_row);
+    
+        incidents_container.appendChild(incidents_item);
+    
+        var b_id = "b" + i.toString();
+    
+        var identification = reports_shuffled[i].incident_id;
+        var to_replace = `<div class="read_btns" id="b_id" onclick="set_incident(${identification})">Read Report</div>`;
+        document.getElementById(b_id).innerHTML = to_replace;
+      }
+
+
+      console.log(number_regulations)
+
+
+      set_title(data.regulations[0].title);
+      set_summary(data.regulations[0].summary);
     });
   }, []);
 

@@ -4,11 +4,32 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/api/output_dict')
-def get_current_time():
-    return {
-        'title': "Sample Title",
-        'summary': "sample summary bla bla bla bla"
-        }
+def get_output_dict():
+
+    output_dict = {
+        'regulations': [
+            {
+                'title' : "regulation_1",
+                'summary' : "regulation_1_description",
+                'link' : "regulation_1_link",
+                'source': "regulation_1_source"
+            },
+            {
+                'title' : "regulation_2",
+                'summary' : "regulation_2_description",
+                'link' : "regulation_2_link",
+                'source': "regulation_2_source"
+            }
+        ],
+        'guidelines': [
+
+        ]
+    }
+    
+   
+
+    return output_dict
+
 
 # main() -- put all other functions in the backend folder - also rename main()
 

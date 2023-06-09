@@ -74,7 +74,7 @@ def display_results(predicted_category, regulation, guideline):
 def classify_display():
     file_name = 'Summary-Regulations-Guidelines.csv'
     #user_input = input("Enter your text: ")
-    user_input = "big farms with huge melons"
+    user_input = "vroom vroom big cars on the road cars on the streets"
     categories = ['Autonomous Vehicle', 'Education', 'Healthcare', 'Agriculture', 'Environment', 'Finance']
 
     regulations_df, category_values = load_regulations(file_name)

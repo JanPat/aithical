@@ -9,4 +9,3 @@ def get_current_time():
 
 # main() -- put all other functions in the backend folder - also rename main()
 
-

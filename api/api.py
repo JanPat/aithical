@@ -5,10 +5,6 @@ app = Flask(__name__)
 
 @app.route('/api/output_dict')
 def get_output_dict():
-
- 
-   
-
     return classify_display()
 
 

@@ -30,13 +30,13 @@ def extract_regulation_and_guideline(matching_regulations):
         reg_type = row['Type']
         reg_summary = row['Summary']
         reg_extract = row['Extract']
-        reg_issuer = row['Entity']
+        reg_source = row['Entity']
         reg_url = row['Official source']
 
         if reg_type == 'Regulation':
-            regulation = (reg_title, reg_summary, reg_extract, reg_issuer, reg_url)
+            regulation = (reg_title, reg_summary, reg_extract, reg_source, reg_url)
         elif reg_type == 'Guideline':
-            guideline = (reg_title, reg_summary, reg_extract, reg_issuer, reg_url)
+            guideline = (reg_title, reg_summary, reg_extract, reg_source, reg_url)
 
     return regulation, guideline
 
@@ -47,23 +47,23 @@ def display_results(predicted_category, regulation, guideline):
     }
 
     if regulation:
-        reg_title, reg_summary, reg_extract, reg_issuer, reg_url = regulation
+        reg_title, reg_summary, reg_extract, reg_source, reg_url = regulation
         regulation_dict = {
             "title": reg_title,
             "summary": reg_summary,
             "extract": reg_extract,
-            "issuer": reg_issuer,
+            "source": reg_source,
             "link": reg_url  
         }
         output_dict["regulations"].append(regulation_dict)
 
     if guideline:
-        guid_title, guid_summary, guid_extract, guid_issuer, guid_url = guideline
+        guid_title, guid_summary, guid_extract, guid_source, guid_url = guideline
         guideline_dict = {
             "title": guid_title,
             "summary": guid_summary,
             "extract": guid_extract,
-            "issuer": guid_issuer,
+            "source": guid_source,
             "link": guid_url 
         }
         output_dict["guidelines"].append(guideline_dict)
@@ -81,11 +81,6 @@ def classify_display():
     predicted_category = classify_input(user_input, categories)
     matching_regulations = get_matching_regulations(regulations_df, predicted_category)
     regulation, guideline = extract_regulation_and_guideline(matching_regulations)
-    display_results(predicted_category, regulation, guideline)
-    return {'category' : predicted_category, 'regulation' :
-            {
-                'title' : "regulation_1",
-                'summary' : "regulation_1_description",
-                'link' : "regulation_1_link",
-                'source': "regulation_1_source"
-            }, 'guideline' : guideline}
+    #display_results(predicted_category, regulation, guideline)
+    return {'regulations' :
+            matching_regulations, 'guidelines' : guideline}

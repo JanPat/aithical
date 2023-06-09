@@ -1,2 +1,2 @@
-FLASK_APP=zero_shot.py
+FLASK_APP=api.py
 FLASK_ENV=development

@@ -76,7 +76,24 @@ export function Project_Analysis_Regulations_Guidelines(){
       });
     }, []);
   
-
+    function handleSubmit(e) {
+        e.preventDefault();
+      
+        const form = e.target;
+        const formData = new FormData(form);
+      
+        const formJson = Object.fromEntries(formData.entries());
+        console.log(formJson);
+        
+        fetch('/api/projectDescription', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        })
+        
+      }
 
     return (
       <body>
@@ -158,20 +175,22 @@ export function Project_Analysis_Regulations_Guidelines(){
           <div class="top_search">
             <div class="inner_form search_form">
   
-              <textarea
-                name="project_description_input"
-                rows="3"
-                cols="1"
-                type="text"
-                id="incident_search"
-                placeholder="Enter your project description"
-                onkeydown="if (event.keyCode == 13)
-                          document.getElementById('search_button').click()">
-              </textarea>
-              <div id="search_button" onclick="search_incidents();">
-  
-                Submit
-              </div>
+              
+            <form method="POST" onSubmit={handleSubmit}>
+              <fieldset>
+                <label>
+                  <textarea
+                    id="project_description_input"
+                    name="project_description_input"
+                    rows="4"
+                    cols="1"
+                    placeholder="Project Description">
+                  </textarea>
+                </label>
+              </fieldset>
+              <button type="submit" id="description_submit">Submit Description</button>
+            </form>
+
             </div>
           </div>
         </div>
@@ -181,7 +200,6 @@ export function Project_Analysis_Regulations_Guidelines(){
         </div>
 
       </div>
-
 
     </body>
     )

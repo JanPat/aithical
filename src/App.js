@@ -14,7 +14,24 @@ function App() {
     });
   }, []);
 
+function handleSubmit(e) {
+  e.preventDefault();
 
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const formJson = Object.fromEntries(formData.entries());
+  console.log(formJson);
+  
+  fetch('/api/projectDescription', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+  
+}
 
   return (
     <div className="App">
@@ -53,16 +70,25 @@ function App() {
         <div class="report_inputs">
           <div class="report_inputs_inner">
             <h1>Project Description:</h1>
+            //MADDY'S CHANGES WRITE CODE here 
+            //take what is in textarea from frontend and send to backend
+            <form method="POST" onSubmit={handleSubmit}>
+              <fieldset>
+                <label>
+                  <textarea
+                    id="project_description_input"
+                    name="project_description_input"
+                    rows="4"
+                    cols="1"
+                    placeholder="Project Description">
+                  </textarea>
+                </label>
+              </fieldset>
+              <button type="submit" id="description_submit">Submit Description</button>
+            </form>
 
-            <textarea
-              id="project_description_input"
-              name="project_description_input"
-              rows="4"
-              cols="1"
-              placeholder="Project Description">
-            </textarea>
+            
         
-            <button id="description_submit" onClick="submit_description()">Submit Description</button>
           </div>
         </div>
 

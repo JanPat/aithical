@@ -71,7 +71,6 @@ def display_results(predicted_category, regulation, guideline):
     json_output = json.dumps(output_dict, indent=4)
     print(json_output)
 
-@app.route("/project-view")
 def classify_display():
     file_name = 'Summary-Regulations-Guidelines.csv'
     #user_input = input("Enter your text: ")

@@ -72,7 +72,7 @@ def display_results(predicted_category, regulation, guideline):
     print(json_output)
 
 @app.route("/project-view")
-def main():
+def classify_display():
     file_name = 'Summary-Regulations-Guidelines.csv'
     #user_input = input("Enter your text: ")
     user_input = "big farms with huge melons"

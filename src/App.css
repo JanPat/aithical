@@ -976,20 +976,33 @@ body {
 }
 .search_form {
   justify-content: center;
+  background-color: red;
 }
-.search_form textarea {
+.search_form form {
   margin: 0;
+  
   margin-left: 2vh;
   margin-right: 2vh;
-  width: 80%;
+  width: 60%;
   resize: none;
+
+  background-color: green;
+  
 }
-#search_button {
+
+.search_form form textarea{
+  float:left;
+  background-color: blue;
+  width: 50%;
+
+}
+#description_submit {
   height: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5vw;
+  float:right;
 }
 
 .incidents_container {

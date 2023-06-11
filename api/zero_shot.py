@@ -4,6 +4,18 @@ from transformers import pipeline
 import json
 from flask import Flask
 
+'''
+source api/venv/bin/activate
+
+in venv, install:
+
+pip install pandas
+pip install torch
+pip install transformers
+pip install flask
+
+'''
+
 app = Flask(__name__)
 
 def load_regulations(file_name):
@@ -24,7 +36,7 @@ def get_matching_regulations(regulations_df, predicted_category):
 def extract_regulation_and_guideline(matching_regulations):
     regulation = None
     guideline = None
-
+    
     for _, row in matching_regulations.iterrows():
         reg_title = row['Title']
         reg_type = row['Type']
@@ -37,7 +49,6 @@ def extract_regulation_and_guideline(matching_regulations):
             regulation = (reg_title, reg_summary, reg_extract, reg_source, reg_url)
         elif reg_type == 'Guideline':
             guideline = (reg_title, reg_summary, reg_extract, reg_source, reg_url)
-
     return regulation, guideline
 
 def display_results(predicted_category, regulation, guideline):
@@ -71,6 +82,8 @@ def display_results(predicted_category, regulation, guideline):
     json_output = json.dumps(output_dict, indent=4)
     print(json_output)
 
+    return json_output
+
 def classify_display():
     file_name = 'Summary-Regulations-Guidelines.csv'
     #user_input = input("Enter your text: ")
@@ -78,9 +91,12 @@ def classify_display():
     categories = ['Autonomous Vehicle', 'Education', 'Healthcare', 'Agriculture', 'Environment', 'Finance']
 
     regulations_df, category_values = load_regulations(file_name)
+
     predicted_category = classify_input(user_input, categories)
+
     matching_regulations = get_matching_regulations(regulations_df, predicted_category)
+
     regulation, guideline = extract_regulation_and_guideline(matching_regulations)
-    #display_results(predicted_category, regulation, guideline)
-    return {'regulations' :
-            matching_regulations, 'guidelines' : guideline}
+
+
+    return display_results(predicted_category, regulation, guideline)

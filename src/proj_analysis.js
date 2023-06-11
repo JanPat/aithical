@@ -176,7 +176,7 @@ export function Project_Analysis_Regulations_Guidelines(){
             <div class="inner_form search_form">
   
               
-            <form method="POST" onSubmit={handleSubmit}>
+            <form method="POST" onSubmit={handleSubmit} >
               <fieldset>
                 <label>
                   <textarea

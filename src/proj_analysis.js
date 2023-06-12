@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 export function Project_Analysis_Regulations_Guidelines(){
 
+  // use sockets to do update or split into 2 pages
+
     const [title_1, set_title] = useState(0);
     const [summary_1, set_summary] = useState(0);
     console.log(title_1)
@@ -75,25 +77,29 @@ export function Project_Analysis_Regulations_Guidelines(){
         set_summary(data.regulations[0].summary);
       });
     }, []);
-  
-    function handleSubmit(e) {
-        e.preventDefault();
-      
-        const form = e.target;
-        const formData = new FormData(form);
-      
-        const formJson = Object.fromEntries(formData.entries());
-        console.log(formJson);
-        
-        fetch('/api/projectDescription', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+    
+      const input = document.getElementById('project_description_input').value;
+      const formData = { project_description_input: input };
+    
+      fetch('/api/projectDescription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Handle the response data
         })
-        
-      }
+        .catch((error) => {
+          // Handle any errors
+        });
+    };
+
 
     return (
       <body>

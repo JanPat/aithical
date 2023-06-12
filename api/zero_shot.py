@@ -14,6 +14,16 @@ pip install torch
 pip install transformers
 pip install flask
 
+pip install flask flask-socketio eventlet
+
+npm install socket.io-client
+
+
+--
+
+npm install socket.io-client
+
+
 '''
 
 app = Flask(__name__)
@@ -84,10 +94,10 @@ def display_results(predicted_category, regulation, guideline):
 
     return json_output
 
-def classify_display():
+def classify_display(user_input):
     file_name = 'Summary-Regulations-Guidelines.csv'
     #user_input = input("Enter your text: ")
-    user_input = "vroom vroom big cars on the road cars on the streets"
+    #user_input = "vroom vroom big cars on the road cars on the streets"
     categories = ['Autonomous Vehicle', 'Education', 'Healthcare', 'Agriculture', 'Environment', 'Finance']
 
     regulations_df, category_values = load_regulations(file_name)

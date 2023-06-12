@@ -7,6 +7,7 @@ export function Connect(){
     return (
 
         // html here
+        <p>test connect page</p>
 
     )
 }

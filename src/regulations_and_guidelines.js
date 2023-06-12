@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export function Project_Analysis_Regulations_Guidelines(){
+function ProjectAnalysis(){
 
   // use sockets to do update or split into 2 pages
 
@@ -108,71 +108,21 @@ export function Project_Analysis_Regulations_Guidelines(){
         <div class="inner_header">
   
   
-          <a href="index.html" class="header_img"
+          <a href="home" class="header_img"
             ><img
               src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg"
           /></a>
   
   
           
-          <a href="incidents.html" class="header_link header_page">Regulations and Guidelines</a>
-          <a href="submit.html" class="header_link">Fairness Metrics</a>
+          <a href="regulations_and_guidelines" class="header_link header_page">Regulations and Guidelines</a>
+          <a href="fairness_metrics" class="header_link">Fairness Metrics</a>
           <div class="header_spacer"></div>
-          <a href="about.html" class="header_link">About</a>
-          <a href="connect.html" class="header_link">Connect</a>
-        </div>
-  
-        <div class="menu_header">
-          <a href="index.html" class="header_img"
-            ><img
-              src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg"
-          /></a>
-          <img
-            onclick="show_function()"
-            class="hamburger"
-            src="https://live.staticflickr.com/65535/50167835143_4d3b56d21c_o.png"
-          />
+          <a href="about" class="header_link">About</a>
+          <a href="connect" class="header_link">Connect</a>
         </div>
       </div>
-      <div class="menu_dropdown" id="menu_dropdown">
-        <a href="index.html">
-          <h1>
-            Home
-          </h1>
-        </a>
-        <a href="submit.html">
-          <h1>
-            Submit
-          </h1>
-        </a>
-        <a href="incidents.html">
-          <h1>
-            Incidents
-          </h1>
-        </a>
-        <a href="statistics.html">
-          <h1>
-            Statistics
-          </h1>
-        </a>
-        <a href="about.html">
-          <h1>
-            About
-          </h1>
-        </a>
-        <a href="connect.html">
-          <h1>
-            Connect
-          </h1>
-        </a>
-        <a href="support.html">
-          <h1>
-            Support
-          </h1>
-        </a>
-  
-        <div class="mob0"></div>
-      </div>
+      
       <div class="content">
         <div class="incidents_top">
           <h1 class="top_title">
@@ -211,3 +161,5 @@ export function Project_Analysis_Regulations_Guidelines(){
     )
   }
   
+
+  export default ProjectAnalysis;

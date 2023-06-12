@@ -976,7 +976,7 @@ body {
 }
 .search_form {
   justify-content: center;
-  background-color: red;
+
 }
 .search_form form {
   margin: 0;
@@ -986,13 +986,13 @@ body {
   width: 60%;
   resize: none;
 
-  background-color: green;
+
   
 }
 
 .search_form form textarea{
   float:left;
-  background-color: blue;
+
   width: 50%;
 
 }

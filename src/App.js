@@ -5,20 +5,21 @@ import Connect from "./connect.js";
 import About from "./about.js";
 import FairnessMetrics from "./fairness_metrics.js"
 import Home from "./home.js"
-import ProjectAnalysis from "./regulations_and_guidelines.js"
+import RegulationsGuidelines from "./regulations_and_guidelines.js"
+import ProjectAnalysis from "./project_analysis.js";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Connect />} />
-          <Route path="/regulations_and_guidelines" element={<ProjectAnalysis />} />
+          <Route index element={<Home />} />
+          <Route path="/regulations_and_guidelines" element={<RegulationsGuidelines />} />
           <Route path="/fairness_metrics" element={<FairnessMetrics />} />
           <Route path="/about" element={<About />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/home" element={<Home />} />
-
+          <Route path="/project_analysis" element={<ProjectAnalysis />} />
         </Route>
       </Routes>
     </BrowserRouter>

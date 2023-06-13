@@ -277,6 +277,9 @@ body {
 }
 .description_input {
   width: 100%;
+  font-family: "Avenir", Helvetica, sans-serif;
+  resize: none;
+
 }
 
 .where_input {
@@ -513,6 +516,28 @@ body {
   font-family: "Avenir", Helvetica, sans-serif;
 }
 
+#project_description_input {
+  width: 100%;
+  border: none;
+  background-color: rgb(20, 82, 120, 0.15);
+  color: #545454;
+  font-size: 1.5em;
+  padding: 0.5vw;
+  font-family: "Avenir", Helvetica, sans-serif;
+}
+
+form{
+  width: 100%;
+  padding:0;
+}
+
+fieldset{
+  padding:0;
+  width: 100%;
+  margin:0;
+}
+
+
 .wage_full2 {
   width: 90%;
   margin-left: 5%;
@@ -527,20 +552,22 @@ body {
   height: 4vh;
   width: 100%;
 }
-#wage_submit_button,
+
+
+
+#description_submit,
 #search_button {
   border: 3px solid #10393f;
   background-color: #ffffff;
   color: #10393f;
   width: auto;
   padding: 1vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  padding: 2vw;
   text-align: center;
   border-radius: 10vh;
   float: right;
 }
-#wage_submit_button:hover,
+#description_submit:hover,
 #search_button:hover {
   cursor: pointer;
   background-color: rgb(20, 82, 120, 0.05);
@@ -950,19 +977,30 @@ body {
   cursor: pointer;
 }
 
-/* incidents.html */
+/* regulations_and_guidelines */
 
 .incidents_top {
   background-color: #ffffff;
   width: 80vw;
   margin-left: 10vw;
   margin-right: 10w;
-  height: 20vh;
+  height: auto;
   position: relative;
   margin-top: 3vw;
   box-shadow: 0px 0px 15px #164c54;
   border-radius: 5px;
 }
+.form_description{
+  margin-left: 2vw;
+  padding-bottom: 2vh;
+}
+
+.form_description a{
+  font-weight: bold;
+  text-decoration: none;
+  color: #10393f;
+}
+
 .top_title {
   position: relative;
   height: 10vh;
@@ -976,8 +1014,14 @@ body {
 }
 .search_form {
   justify-content: center;
+  width:50%;
 
 }
+
+#project_title{
+  width: 100%;
+}
+
 .search_form form {
   margin: 0;
   
@@ -990,12 +1034,16 @@ body {
   
 }
 
+fieldset{
+  border:none;
+}
+
 .search_form form textarea{
   float:left;
-
-  width: 50%;
-
+  width: 100%;
+  border:none
 }
+
 #description_submit {
   height: 1em;
   display: flex;
@@ -1234,7 +1282,7 @@ svg > g > g:last-child {
   .see_more_div {
     margin-bottom: 2em;
   }
-  #wage_submit_button,
+  #description_submit,
   #search_button {
     border: 3px solid #10393f;
     background-color: #ffffff;

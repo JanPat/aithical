@@ -14,14 +14,14 @@ pip install torch
 pip install transformers
 pip install flask
 
-pip install flask flask-socketio eventlet
+pip install flask flask-socketio eventlet (do not need))
 
-npm install socket.io-client
+npm install socket.io-client (do not need)
 
 
 --
 
-npm install socket.io-client
+npm install socket.io-client (do not need))
 
 
 '''

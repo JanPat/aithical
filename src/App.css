@@ -1007,9 +1007,12 @@ fieldset{
   position: relative;
   height: 10vh;
   margin: 0;
-  margin-left: 2vh;
+  margin-left: 2vw;
   display: flex;
   align-items: center;
+}
+.projects_explanation{
+  margin-left: 2vw;
 }
 .top_search {
   height: 10vh;

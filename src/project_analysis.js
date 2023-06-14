@@ -5,6 +5,8 @@ function ProjectAnalysis(){
     const [title_1, set_title] = useState(0);
     const [summary_1, set_summary] = useState(0);
 
+    var proj_title_ls = localStorage.getItem('project_description_title');
+    var proj_description_ls = localStorage.getItem('project_description_input');
     var data = JSON.parse(localStorage.getItem('model_output_dict'));
 
     console.log("new page");
@@ -23,15 +25,42 @@ function ProjectAnalysis(){
     console.log("# Guidelines:")
     console.log(number_guidelines);
 
-    var incidents_container = document.getElementById("in_container");
-    incidents_container.innerHTML = "";
+    var title_element = document.getElementById("proj_title_ls_element");
+    if (title_element !== null){
+      title_element.innerHTML = proj_title_ls
+    }
+    else{
+      console.log("Title HTML not found")
+    }
+    var desc_element = document.getElementById("proj_description_ls_element");
+    if (desc_element !== null){
+      desc_element.innerHTML = proj_description_ls
+    }
+    else{
+      console.log("Description HTML not found")
+    }
 
+    var incidents_container = document.getElementById("r_container");
     var guidelines_container = document.getElementById("g_container");
-    guidelines_container.innerHTML = "";
+
+    if (incidents_container !== null){
+      incidents_container.innerHTML = ""
+    }
+    else{
+      console.log("regulations container not found")
+    }
+
+    if (guidelines_container !== null){
+      guidelines_container.innerHTML = ""
+    }
+    else{
+      console.log("guidelines container not found")
+    }
 
 
-        
-    if (number_regulations !== 0){
+
+
+    if (number_regulations !== 0 && incidents_container !== null){
         for (var i = 0; i < number_regulations; i++) {
 
       
@@ -74,7 +103,7 @@ function ProjectAnalysis(){
         }
       }
 
-      if (number_guidelines !== 0){
+      if (number_guidelines !== 0 && guidelines_container !== null){
         for (var i = 0; i < number_guidelines; i++) {
 
       
@@ -145,15 +174,22 @@ function ProjectAnalysis(){
           <h1 class="top_title">
             Project Analysis
           </h1>
+          <p class="projects_explanation">
+            The following bla bla bla bla bla bla bla
+          </p>
+          <h3 id="proj_title_ls_element">
+            Project Title
+          </h3>
+          <p id="proj_description_ls_element">
+            Project Description
+          </p>
         </div>
-        <div class="incidents_container" id="in_container">
-  
-  
-        </div>
+        
+        <h1>Regulations</h1>
+        <div class="incidents_container" id="r_container"></div>
 
-        <div class="incidents_container" id="g_container">
-
-        </div>
+        <h1>Guidelines</h1>
+        <div class="incidents_container" id="g_container"></div>
 
       </div>
 

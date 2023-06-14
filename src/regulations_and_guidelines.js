@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import ProjectAnalysis from "./project_analysis.js" ;
+import { useNavigate } from 'react-router-dom';
 
 function RegulationsGuidelines() {
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,8 +36,9 @@ function RegulationsGuidelines() {
         console.log("Model Output Dict:")
         console.log(data)
         localStorage.setItem('model_output_dict', JSON.stringify(data));
-        ProjectAnalysis();
-        console.log("done, redirecting")
+        //ProjectAnalysis();
+        navigate('/project_analysis');
+        console.log("done, redirecting2")
       })
       .catch((error) => {
         // Handle any errors

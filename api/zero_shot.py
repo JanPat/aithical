@@ -14,14 +14,14 @@ pip install torch
 pip install transformers
 pip install flask
 
-pip install flask flask-socketio eventlet
+pip install flask flask-socketio eventlet (do not need))
 
-npm install socket.io-client
+npm install socket.io-client (do not need)
 
 
 --
 
-npm install socket.io-client
+npm install socket.io-client (do not need))
 
 
 '''
@@ -43,9 +43,10 @@ def get_matching_regulations(regulations_df, predicted_category):
     matching_regulations = regulations_df[regulations_df['Category'] == predicted_category]
     return matching_regulations
 
-def extract_regulation_and_guideline(matching_regulations):
-    regulation = None
-    guideline = None
+def extract_regulation_and_guideline(matching_regulations): #put a limit here?
+    regulations = []
+    guidelines = []
+    threshold = 2
     
     for _, row in matching_regulations.iterrows():
         reg_title = row['Title']
@@ -56,10 +57,24 @@ def extract_regulation_and_guideline(matching_regulations):
         reg_url = row['Official source']
 
         if reg_type == 'Regulation':
-            regulation = (reg_title, reg_summary, reg_extract, reg_source, reg_url)
+            regulation = {
+                "title": reg_title,
+                "summary": reg_summary,
+                "extract": reg_extract,
+                "source": reg_source,
+                "link": reg_url  
+            }
+            regulations.append(regulation)
         elif reg_type == 'Guideline':
-            guideline = (reg_title, reg_summary, reg_extract, reg_source, reg_url)
-    return regulation, guideline
+            guideline = {
+                "title": reg_title,
+                "summary": reg_summary,
+                "extract": reg_extract,
+                "source": reg_source,
+                "link": reg_url  
+            }
+            guidelines.append(guideline)
+    return regulations, guidelines
 
 def display_results(predicted_category, regulation, guideline):
     output_dict = {
@@ -91,6 +106,9 @@ def display_results(predicted_category, regulation, guideline):
 
     json_output = json.dumps(output_dict, indent=4)
     print(json_output)
+    print()
+    print()
+    print()
 
     return json_output
 
@@ -104,9 +122,26 @@ def classify_display(user_input):
 
     predicted_category = classify_input(user_input, categories)
 
+    print("predicted_category:", predicted_category)
+
     matching_regulations = get_matching_regulations(regulations_df, predicted_category)
 
-    regulation, guideline = extract_regulation_and_guideline(matching_regulations)
+    print("matching_regulations")
+    print(matching_regulations)
+
+    regulations, guidelines = extract_regulation_and_guideline(matching_regulations)
+
+    output_dict = {
+        "regulations": regulations,
+        "guidelines": guidelines
+    }
+
+    return output_dict
+
+    #regulation, guideline = extract_regulation_and_guideline(matching_regulations)
+
+    #print("regulation", regulation)
+    #print("guideline", guideline)
 
 
-    return display_results(predicted_category, regulation, guideline)
+    #return display_results(predicted_category, regulation, guideline)

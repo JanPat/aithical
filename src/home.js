@@ -6,7 +6,9 @@ function Home() {
       <div className="header">
         <div className="inner_header">
           <a href="home" className="header_img">
-            <img src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg" alt="Logo" />
+          <img
+              src="https://i.imgur.com/gUzP4ml.png" alt='Logo loading'
+          />
           </a>
           <a href="regulations_and_guidelines" className="header_link header_page">Regulations and Guidelines</a>
           <a href="fairness_metrics" className="header_link">Fairness Metrics</a>

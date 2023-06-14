@@ -13,8 +13,8 @@ function FairnessMetrics(){
             ><img
             src="https://i.imgur.com/gUzP4ml.png" alt='Aithical'
         /></a>
-            <a href="regulations_and_guidelines" class="header_link header_page">Regulations and Guidelines</a>
-          <a href="fairness_metrics" class="header_link">Fairness Metrics</a>
+            <a href="regulations_and_guidelines" class="header_link">Regulations and Guidelines</a>
+          <a href="fairness_metrics" class="header_link header_page">Fairness Metrics</a>
           <div class="header_spacer"></div>
           <a href="about" class="header_link">About</a>
           <a href="connect" class="header_link">Connect</a>

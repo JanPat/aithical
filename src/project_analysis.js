@@ -169,7 +169,7 @@ function ProjectAnalysis(){
   
           <a href="home" class="header_img"
             ><img
-              src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg"
+              src="https://i.imgur.com/gUzP4ml.png"
           /></a>
   
   

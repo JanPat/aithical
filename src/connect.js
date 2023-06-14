@@ -11,7 +11,7 @@ function Connect(){
           <div class="inner_header">
           <a href="home" class="header_img"
             ><img
-              src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg"
+              src="https://i.imgur.com/gUzP4ml.png" alt='Logo loading'
           /></a>
             <a href="regulations_and_guidelines" class="header_link">Regulations and Guidelines</a>
           <a href="fairness_metrics" class="header_link">Fairness Metrics</a>

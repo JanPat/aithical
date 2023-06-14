@@ -157,7 +157,8 @@ body {
   background-color: #ffffff;
   width: 70vw;
   min-width: 450px;
-  min-height: 80vh;
+  min-height: 20vh;
+  max-height: 80vh;
   margin: 3vw;
   border-radius: 0px; /* add a value for border radius? */
   position: relative;
@@ -561,11 +562,11 @@ fieldset{
   background-color: #ffffff;
   color: #10393f;
   width: auto;
-  padding: 1vh;
-  padding: 2vw;
+  padding: 3%;
   text-align: center;
   border-radius: 10vh;
   float: right;
+  margin-bottom: 3vh;
 }
 #description_submit:hover,
 #search_button:hover {
@@ -992,6 +993,7 @@ fieldset{
 }
 .form_description{
   margin-left: 2vw;
+  margin-right: 2vw;
   padding-bottom: 2vh;
 }
 
@@ -1288,9 +1290,7 @@ svg > g > g:last-child {
     background-color: #ffffff;
     color: #10393f;
     width: 80%;
-    padding: 1vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding: 15px;
     text-align: center;
     border-radius: 10vh;
     float: right;

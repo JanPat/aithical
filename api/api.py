@@ -11,9 +11,12 @@ import random
 app = Flask(__name__)
 app.secret_key = 'aithical_key'
 
+
+
+
 @app.route('/api/projectDescription', methods=['POST'])
 def send_input():
-    print("send input")
+    print("IN SEND_INPUT()")
     form_data = request.get_json()# request.form
     print(form_data)
     text_input = form_data['project_description_input']
@@ -26,19 +29,18 @@ def send_input():
     print(output_dict)
     print(type(output_dict))
 
-    session['saved_data'] = output_dict
+    #session['saved_data'] = output_dict
 
-    return "success"#redirect(url_for('get_output_dict', output_dict=output_dict))
+    return output_dict#redirect(url_for('get_output_dict', output_dict=output_dict))
 
+# on return, call other frmo js file
 
 
 
 
 @app.route('/api/output_dict')
 def get_output_dict():
-    output_dict = request.args.get('text_input')
-    print("JANVI")
-    print(output_dict)
+    output_dict = {}
     return output_dict
     '''
         # todo: call and feed into classify display

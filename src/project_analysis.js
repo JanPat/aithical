@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 function ProjectAnalysis(){
 
-    const [title_1, set_title] = useState(0);
-    const [summary_1, set_summary] = useState(0);
+  const [title_1, set_title] = useState(0);
+  const [summary_1, set_summary] = useState(0);
+
+  const set_information = () => {
 
     var proj_title_ls = localStorage.getItem('project_description_title');
     var proj_description_ls = localStorage.getItem('project_description_input');
@@ -27,7 +29,7 @@ function ProjectAnalysis(){
 
     var title_element = document.getElementById("proj_title_ls_element");
     if (title_element !== null){
-      title_element.innerHTML = proj_title_ls;
+      title_element.textContent = proj_title_ls;
       console.log("title implemented");
     }
     else{
@@ -35,7 +37,7 @@ function ProjectAnalysis(){
     }
     var desc_element = document.getElementById("proj_description_ls_element");
     if (desc_element !== null){
-      desc_element.innerHTML = proj_description_ls;
+      desc_element.textContent = proj_description_ls;
       console.log("description implemented");
     }
     else{
@@ -46,7 +48,7 @@ function ProjectAnalysis(){
     var guidelines_container = document.getElementById("g_container");
 
     if (incidents_container !== null){
-      incidents_container.innerHTML = "";
+      incidents_container.textContent = "";
       console.log("regulations implemented");
     }
     else{
@@ -54,7 +56,7 @@ function ProjectAnalysis(){
     }
 
     if (guidelines_container !== null){
-      guidelines_container.innerHTML = "";
+      guidelines_container.textContent = "";
       console.log("guidelines implemented");
     }
     else{
@@ -154,10 +156,12 @@ function ProjectAnalysis(){
           document.getElementById(b_id).innerHTML = to_replace;
         }
       }
+  }; // end of set_information 
+
 
 
     return (
-      <body>
+      <body onLoad={set_information}>
       <div class="header">
   
         <div class="inner_header">

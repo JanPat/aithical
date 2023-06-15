@@ -10,7 +10,7 @@ function Home() {
               src="https://i.imgur.com/gUzP4ml.png" alt='Logo loading'
           />
           </a>
-          <a href="regulations_and_guidelines" className="header_link">Regulations and Guidelines</a>
+          <a href="regulations_and_guidelines" className="header_link">Project Analysis</a>
           <a href="fairness_metrics" className="header_link">Fairness Metrics</a>
           <div className="header_spacer"></div>
           <a href="about" className="header_link">About</a>

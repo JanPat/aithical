@@ -669,6 +669,11 @@ fieldset{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  color:#10393f;
+}
+.link_reg{
+  color:#10393f;
+  font-weight: bold;
 }
 .tags_display div {
   color: #ffffff;
@@ -1717,6 +1722,7 @@ svg > g > g:last-child {
     .tags_display {
       width: auto;
       margin-right: 1em;
+      color:#10393f;
     }
     .tags_display div {
       margin-right: 1vw;
@@ -1727,6 +1733,11 @@ svg > g > g:last-child {
       margin-bottom: 1vh;
       border-radius: 50px;
       margin-left: 0.7em;
+      color:#10393f;
+    }
+    .tags_display a{
+      color:#10393f;
+      font-weight: bold;
     }
     .incident_form_navigation div {
       width: 30%;

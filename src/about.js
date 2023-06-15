@@ -32,42 +32,47 @@ function About(){
             About
           </h1>
           <h2>
-            Welcome to Aithical,
+            Welcome to Aithical
           </h2>
           <p>
-            <b>an easy solution to navigate the complex landscape of AI ethics</b>. 
+            <b>Ethical AI, made simple.</b>
             <br /><br />
-            We understand the critical importance of integrating ethics into AI development processes.
-            Whether you are a seasoned AI practitioner or just starting your journey, 
-            Aithical provides you with the resources you need to build ethical AI solutions.
+            As AI research develops and new tools become available, we at aithical recognize ethical considerations 
+            can sometimes get lost in the development process, especially for those unfamiliar with fairness and ethics in AI. 
+            That’s why we do the hard work for you; by compiling AI toolkits, fairness metrics, relevant legislation, and 
+            ethical guidelines in one place, you can focus less on searching and more on creating. Our all-in-one platform makes
+             it easy for anyone to learn about AI fairness, test a model, and ensure compliance with existing legislation and ethical 
+             guidelines. Whether you're a researcher, student, developer, data scientist or business professional, aithical is a one 
+             stop shop for fairness and ethics in AI. 
+            <br /><br />         
+      
+          </p>
+          <h2>
+            Our Mission
+          </h2>
+          <p>
+            At aithical, our mission is to <b>  ensure fair and ethical development at every stage of a project’s evolution.
+ </b>
+            <br /><br />
+            By providing the newest regulations, guidelines, and toolkits, we strive to create a future where every new AI project is certified ethical 
+            and fair. While technology is advancing at an exponential pace, aithical ensures that human good is at the center of every algorithm.
             <br /><br />         
   
           </p>
           <h2>
-            Our mission
-          </h2>
-          <p>
-            At aithical, our mission is to <b> simplify the process of incorporating ethics into AI development </b>. 
-            <br /><br />
-            By providing a curated collection of regulations, guidelines, and innovative tools, we strive to create 
-            a future where AI benefits society while upholding ethical principles and safeguarding human values.
-            <br /><br />         
-  
-          </p>
-          <h2>
-            Aithical: your trusted AI ethics companion.
+            How We Work
           </h2>
           <p class="mob4">
-            By leveraging Aithical, you gain access to a wealth of relevant resources that cover 
-            a wide range of topics, including data privacy, algorithmic transparency, bias mitigation and more.
-            Whether you're a researcher, student, developer, data scientist or business professional, 
-            Aithical equips you with <b>relevant resources that can assist you in understanding the legal and 
-            ethical frameworks surrounding AI technologies</b>. 
-            <br /><br />
-            We believe that by equipping AI practitioners with the right knowledge and tools, 
-            we can collectively shape a future where AI is used responsibly and ethically. 
-            <br /><br />
-            Join us on this ethical AI journey and let Aithical be your trusted AI ethics companion.
+          aithical utilizes a zero-shot classification task provided in Facebook’s <a href="https://huggingface.co/facebook/bart-large"> BART Large Language Model</a> in order to categorize 
+          natural language descriptions of projects utilizing artificial intelligence and machine learning algorithms. We then display 
+          regulations and guidelines that are relevant to projects in that specific category. 
+          <br></br>
+          <br></br>
+          Future developments will add to our site’s existing functionality. We plan on implementing a file upload system to the 
+          fairness metrics page, allowing users to upload and run tests for various fairness metrics on their datasets and models, 
+          alongside the outputs of said models. These results will inform the user on weaknesses in their model and dataset and 
+          provide better insight on effective bias mitigation strategies that will be available on aithical. Keep up to date with new changes
+          on our <a href="https://github.com/JanPat/react-flask-app">GitHub Repo!</a>
           </p>
         </div>
       </div>

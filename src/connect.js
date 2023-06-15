@@ -1,6 +1,30 @@
 import React from 'react';
 
+
 function Connect(){
+
+  const LinkDieynaba = () => {
+    window.location.href = 'https://www.linkedin.com/in/janvi-patel-954b2a173/';
+  };
+
+  const LinkAva = () => {
+    window.location.href = 'https://www.linkedin.com/in/ava-gilmour-185ab6251/';
+  };
+
+  const LinkBonam = () => {
+    window.location.href = 'https://www.linkedin.com/in/janvi-patel-954b2a173/';
+  };
+
+  const LinkMaddie = () => {
+    window.location.href = 'https://www.linkedin.com/in/madeline-mussio/';
+  };
+
+
+  const LinkJanvi = () => {
+    window.location.href = 'https://www.linkedin.com/in/janvi-patel-954b2a173/';
+  };
+
+  
 
     // js code here
 
@@ -21,19 +45,66 @@ function Connect(){
           </div>
         </div>
         <div class="content_3">
-          <div class="inner_container_simple">
-            <h1>
-              Connect
-            </h1>
-            <h2>
-              blabla
-            </h2>
-            <p>
-               blabla
-            </p>
-            
+      <div class="inner_container_simple">
+        <h1>Connect with Us</h1>
+        <p>
+          Have any questions, suggestions, or want to brainstorm with us?
+          <br/><br/>
+          <a href="mailto: aithical@gmail.com">Send us an email!</a>
+        </p>
+        <p>
+        Praesent eget dui rhoncus, dignissim ligula a, vehicula ex. Nulla ac nunc porttitor, dapibus nunc egestas, porttitor tortor. Proin vel odio et magna feugiat porta et id massa. Aliquam vel ligula blandit, blandit mauris in, elementum neque. Aliquam nec turpis lobortis, tristique quam et, vulputate mi. Vivamus lorem nisi, pulvinar id imperdiet ac, luctus et nisl.
+        </p>
+        <div class="picture_div">
+        <div onClick={LinkDieynaba}>
+            <img
+              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
+            />
+            <h3>
+            Dieynaba
+              <br/>Diallo
+            </h3>
+          </div>
+          <div onClick={LinkAva}>
+            <img
+              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
+            />
+            <h3>
+            Ava
+              <br/>Gilmour
+            </h3>
+          </div>
+          <div onClick={LinkBonam}>
+            <img
+              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
+            />
+            <h3>
+            Bonam
+              <br/>Mingole
+            </h3>
+          </div>
+          <div onClick={LinkMaddie}>
+            <img
+              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
+            />
+            <h3>
+            Madeline
+              <br/>Mussio
+            </h3>
+          </div>
+          <div onClick={LinkJanvi}>
+            <img
+              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
+            />
+            <h3 class="mob">
+            Janvi
+              <br/>Patel
+            </h3>
           </div>
         </div>
+      </div>
+    </div>
+
       </body>
 
     )

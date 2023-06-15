@@ -9,10 +9,10 @@ function Home() {
             <img src="https://wp.uthscsa.edu/mikiten-graduate-symposium/wp-content/uploads/sites/158/2019/02/placeholder.com-logo3.jpg" alt="Logo" />
           </a>
           <a href="regulations_and_guidelines" className="header_link header_page">Regulations and Guidelines</a>
-          <a href="fairness_metrics" className="header_link">Fairness Metrics</a>
+          <a href="_metrics" className="header_link">Fairness Metrics</a>
           <div className="header_spacer"></div>
           <a href="about" className="header_link">About</a>
-          <a href="connect" className="header_link">Connect</a>
+          <a href="contact" className="header_link">Contact</a>
         </div>
       </div>
 

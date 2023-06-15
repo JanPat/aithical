@@ -9,7 +9,7 @@ function Navbar() {
           <Link to="/regulations_and_guidelines">Proj Anal</Link>
         </li>
         <li>
-          <Link to="/connect">connect</Link>
+          <Link to="/contact">contact</Link>
         </li>
         <li>
           <Link to="/about">about</Link>

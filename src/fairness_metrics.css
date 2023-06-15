@@ -1,0 +1,114 @@
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    background: #f1f1f1;
+    word-break: break-all;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    width: 100vw;
+  height: 90.6vh;
+  position: fixed;
+  top: 9.4vh;
+  left: 0;
+  color: #10393f;
+  background-color: #279fb0;
+  box-shadow: 0px 0px 10px #10393f inset;
+  }
+  
+  .bloc-tabs {
+    display: flex;
+    width: 100%;
+  }
+  .tabs {
+    padding: 1rem;
+    text-align: center;
+    width: 50%;
+    background: #279fb0;
+    border-radius: 0.2rem;
+    /* padding: 15px;
+    text-align: center;
+    width: 50%;
+    background: rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none; */
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs  {
+    background: #10393f;
+    
+  }
+
+  .tabs:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    }
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+  }
+  
+
+  .conten-tabs {
+    width: 100%;
+    height: 100%;
+  }
+
+  button { 
+    color: white;
+    font-size: 16px;
+  }
+  .conten {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    display: none;
+  }
+  .conten h5 {
+    padding: 0px 0 5px 0px;
+  }
+
+  .active-conten {
+    display: block;
+    width: 100%;
+    height: 100%;
+  } 
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .evaluate{
+    bottom: 0;
+    position:  absolute;
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }

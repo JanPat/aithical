@@ -119,7 +119,7 @@ function ProjectAnalysis(){
           <a href="fairness_metrics" class="header_link">Fairness Metrics</a>
           <div class="header_spacer"></div>
           <a href="about" class="header_link">About</a>
-          <a href="connect" class="header_link">Connect</a>
+          <a href="contact" class="header_link">Contact</a>
         </div>
       </div>
       

@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout.js";
-import Connect from "./connect.js";
+import Contact from "./connect.js";
 import About from "./about.js";
 import FairnessMetrics from "./fairness_metrics.js"
 import Home from "./home.js"
@@ -12,11 +12,11 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Connect />} />
+          <Route index element={<Contact />} />
           <Route path="/regulations_and_guidelines" element={<ProjectAnalysis />} />
           <Route path="/fairness_metrics" element={<FairnessMetrics />} />
           <Route path="/about" element={<About />} />
-          <Route path="/connect" element={<Connect />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Home />} />
 
         </Route>

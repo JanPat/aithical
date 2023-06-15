@@ -1,35 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout.js";
+import Connect from "./connect.js";
+import About from "./about.js";
+import FairnessMetrics from "./fairness_metrics.js"
+import Home from "./home.js"
+import RegulationsGuidelines from "./regulations_and_guidelines.js"
+import ProjectAnalysis from "./project_analysis.js";
 
-function App() {
-  const [currentTime, setCurrentTime] = useState(0);
-  console.log(currentTime)
-
-  useEffect(() => {
-    fetch('/api/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    });
-  }, []);
-
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload. I love to code hahah hehe.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>The current time is {currentTime}.</p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/regulations_and_guidelines" element={<RegulationsGuidelines />} />
+          <Route path="/fairness_metrics" element={<FairnessMetrics />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/project_analysis" element={<ProjectAnalysis />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));

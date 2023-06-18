@@ -90,14 +90,14 @@ function RegulationsGuidelines() {
                 </h2>
               </div>
               <div class="wage_inputs">
-                <div class="wage_spacer"></div>
+                <br/>
                 <div class="wage_group wage_full">
                   <h3>
                     Project Title
                   </h3>
                   <input type="text" id="project_title" name="company" placeholder="Enter your Project Title" />
                 </div>
-                <div class="wage_spacer"></div>
+                <br/>
                 <div class="wage_group wage_full">
                   <h3>
                     Project Description

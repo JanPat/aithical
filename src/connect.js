@@ -53,8 +53,7 @@ function Connect(){
           <a href="mailto: aithical@gmail.com">Send us an email!</a>
         </p>
         <p>
-        Praesent eget dui rhoncus, dignissim ligula a, vehicula ex. Nulla ac nunc porttitor, dapibus nunc egestas, porttitor tortor. Proin vel odio et magna feugiat porta et id massa. Aliquam vel ligula blandit, blandit mauris in, elementum neque. Aliquam nec turpis lobortis, tristique quam et, vulputate mi. Vivamus lorem nisi, pulvinar id imperdiet ac, luctus et nisl.
-        </p>
+        We are a group of women passionate about AI for social good and the ethical implementation of AI solutions.        </p>
         <div class="picture_div">
         <div onClick={LinkDieynaba}>
             <img

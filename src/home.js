@@ -66,9 +66,12 @@ function Home() {
 
         </p>
       </div>
+      <br/>
+      <br/>
+      <br/>
       <div class="home_txt transparent">
         <h1>
-          <span><i>(definition)</i></span> <b>Ethics</b> : blabla bla
+          
         </h1>
       </div>
       <div class="home_txt white">

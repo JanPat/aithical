@@ -497,6 +497,15 @@ body {
 .wage_half {
   width: 46%;
 }
+
+.wage_23{
+  width: 70%;
+}
+
+.wage_13{
+  width: 20%;
+}
+
 .wage_full {
   width: 100%;
 }
@@ -563,10 +572,38 @@ fieldset{
   width: 100%;
 }
 
+.fontsize p{
+  font-size: 1.25em;
+  margin: 2em;
+}
 
+.conten {
+  display: none;
+}
+
+.active-conten {
+  display: block;
+} 
+
+
+
+/*
+.eval_btn {
+  border: 3px solid #454b54;
+  background-color: #ededed;
+  color: #454b54;
+  width: auto;
+  padding: 7%;
+  text-align: center;
+  border-radius: 10vh;
+  float: right;
+  margin-bottom: 3vh;
+  font-size: 0.8em;
+}*/
 
 #description_submit,
-#search_button {
+#search_button,
+.eval_btn {
   border: 3px solid #454b54;
   background-color: #ffffff;
   color: #454b54;
@@ -577,6 +614,48 @@ fieldset{
   float: right;
   margin-bottom: 3vh;
 }
+
+.eval_btn{
+  font-size: 0.8em;
+}
+
+.bloc-tabs{
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4vh;
+  margin-bottom:0;
+}
+
+.bloc-tabs button{
+  border: 3px solid #454b54;
+  background-color: #454b54;
+  color: #ffffff;
+  width: auto;
+  padding: 1%;
+  text-align: center;
+  border-radius: 10vh;
+  float: right;
+  font-size: 1em;
+  margin:0;
+  font-weight: bold;
+}
+
+.bloc-tabs button:hover{
+  cursor: pointer;
+  border: 3px solid #fff;
+  background-color: #454b54;
+  color: #ffffff;
+  width: auto;
+  padding: 1%;
+  text-align: center;
+  border-radius: 10vh;
+  float: right;
+  font-size: 1em;
+  margin:0;
+  font-weight: bold;
+}
+
 #description_submit:hover,
 #search_button:hover {
   cursor: pointer;

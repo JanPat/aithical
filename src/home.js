@@ -66,14 +66,7 @@ function Home() {
 
         </p>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <div class="home_txt transparent">
-        <h1>
-          
-        </h1>
-      </div>
+
       <div class="home_txt white">
         <h1>
           our features
@@ -102,11 +95,6 @@ function Home() {
             />
           </div>
         </div>
-      </div>
-      <div class="home_txt transparent">
-      <h1>
-          <span><i>(definition)</i></span> <b>Fairness</b> : blabla bla
-        </h1>
       </div>
 
       <div class="home_txt yellow">

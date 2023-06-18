@@ -2,7 +2,29 @@ import React from 'react';
 
 function RegulationsGuidelinesViewer(){
 
-    // js code here
+  var btn_selected = localStorage.getItem("selected_b");
+  var viewer_type = localStorage.getItem("viewer_type");
+  var key, information_reg;
+
+  if (viewer_type === "regulation"){
+    key = "b" + btn_selected.toString();
+  } else if (viewer_type === "guideline") {
+    key = "b2" + btn_selected.toString();
+  }
+
+  information_reg = JSON.parse(localStorage.getItem(key));
+  console.log(information_reg);
+
+  // error handling todo
+
+
+  document.getElementById("viewer_title").innerHTML = information_reg.title;
+  document.getElementById("viewer_description").innerHTML = information_reg.summary;
+  document.getElementById("viewer_source").innerHTML = "Source: " + information_reg.source;
+  document.getElementById("viewer_link").href = information_reg.link;
+  document.getElementById("viewer_excerpt").innerHTML = information_reg.extract.slice(0, 320) + "...";
+
+  
 
     return (
 
@@ -44,7 +66,7 @@ A vehicle operated under such a permit may also be exempted from being insured t
           </p>
 
           <div class="tags_display" id="tags_display">
-            <h3>
+            <h3 id="viewer_source">
               Source: The Legislative Assembly of Manitoba
             </h3>
             <p><i>Last Updated: 06-15-2023</i></p>
@@ -57,17 +79,17 @@ A vehicle operated under such a permit may also be exempted from being insured t
              <h2>
             Excerpt
           </h2>
-          <p>
+          <p id="viewer_excerpt">
           <b>Technology testing permits</b>
           <br/>  318.13(1)  The minister may, in accordance with the regulations, issue a technology testing permit to allow a test vehicle to be driven for the purpose of:
           <br/><br/> (a) testing a type of vehicle or vehicle technology; or
           <br/><br/> (b) evaluating the safety or performance of a type of vehicle or vehicle technology.
-          <br/><a class="link_reg" href="https://web2.gov.mb.ca/bills/42-2/b023e.php">Read More</a>
+          <br/><a class="link_reg" id="viewer_link" href="https://web2.gov.mb.ca/bills/42-2/b023e.php">Read More</a>
           </p>
           
 
           </div>
-          <img class = "viewer_img mobp" src="https://i.imgur.com/gUzP4ml.png"/>
+          <img class = "viewer_img mobp" src="https://i.imgur.com/gUzP4ml.png" alt="logo"/>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import React from 'react';
 function Connect(){
 
   const LinkDieynaba = () => {
-    window.location.href = 'https://www.linkedin.com/in/janvi-patel-954b2a173/';
+    window.location.href = 'https://www.linkedin.com/in/dieynaba-diallo-59b404200/';
   };
 
   const LinkAva = () => {
@@ -12,7 +12,7 @@ function Connect(){
   };
 
   const LinkBonam = () => {
-    window.location.href = 'https://www.linkedin.com/in/janvi-patel-954b2a173/';
+    window.location.href = 'https://www.linkedin.com/';
   };
 
   const LinkMaddie = () => {
@@ -24,9 +24,6 @@ function Connect(){
     window.location.href = 'https://www.linkedin.com/in/janvi-patel-954b2a173/';
   };
 
-  
-
-    // js code here
 
     return (
 
@@ -56,45 +53,35 @@ function Connect(){
         We are a group of women passionate about AI for social good and the ethical implementation of AI solutions.        </p>
         <div class="picture_div">
         <div onClick={LinkDieynaba}>
-            <img
-              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
-            />
+            <img src="https://imgur.com/rBN3He8.jpg" alt="headshot Dieynaba"/>
             <h3>
             Dieynaba
               <br/>Diallo
             </h3>
           </div>
           <div onClick={LinkAva}>
-            <img
-              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
-            />
+            <img src="https://imgur.com/X4bKAfD.jpg" alt="headshot Ava"/>
             <h3>
             Ava
               <br/>Gilmour
             </h3>
           </div>
           <div onClick={LinkBonam}>
-            <img
-              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
-            />
+            <img src="https://imgur.com/cS8MFqj.jpg" alt="headshot Bonam"/>
             <h3>
             Bonam
               <br/>Mingole
             </h3>
           </div>
           <div onClick={LinkMaddie}>
-            <img
-              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
-            />
+            <img src="https://imgur.com/YqaNEPm.jpg" alt="headshot Maddie"/>
             <h3>
             Madeline
               <br/>Mussio
             </h3>
           </div>
           <div onClick={LinkJanvi}>
-            <img
-              src="https://static.wixstatic.com/media/4dfff7_792a117cf5014ad79a25c6ea33ee4c7c~mv2.png/v1/fill/w_260,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/profile-picture-circle-png-blank-3.png"
-            />
+            <img src="https://imgur.com/uVcKbkM.jpg" alt="headshot Janvi"/>
             <h3 class="mob">
             Janvi
               <br/>Patel

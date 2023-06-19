@@ -2,6 +2,15 @@ body {
   font-family: "Avenir", Helvetica, sans-serif;
   background-color: #454b54;
 }
+
+#green_logo{
+  color:#529e5e;
+}
+
+#w_link{
+  color:white;
+}
+
 .header {
   background-color: #ffffff;
   width: 100vw;
@@ -488,6 +497,15 @@ body {
 .wage_half {
   width: 46%;
 }
+
+.wage_23{
+  width: 70%;
+}
+
+.wage_13{
+  width: 20%;
+}
+
 .wage_full {
   width: 100%;
 }
@@ -554,10 +572,41 @@ fieldset{
   width: 100%;
 }
 
+.fontsize p{
+  font-size: 1.25em;
+  margin: 2em;
+}
 
+.conten {
+  display: none;
+}
+
+.active-conten {
+  display: block;
+} 
+
+#no_underline{
+  text-decoration: none;
+  color: white;
+}
+
+/*
+.eval_btn {
+  border: 3px solid #454b54;
+  background-color: #ededed;
+  color: #454b54;
+  width: auto;
+  padding: 7%;
+  text-align: center;
+  border-radius: 10vh;
+  float: right;
+  margin-bottom: 3vh;
+  font-size: 0.8em;
+}*/
 
 #description_submit,
-#search_button {
+#search_button,
+.eval_btn {
   border: 3px solid #454b54;
   background-color: #ffffff;
   color: #454b54;
@@ -568,6 +617,48 @@ fieldset{
   float: right;
   margin-bottom: 3vh;
 }
+
+.eval_btn{
+  font-size: 0.8em;
+}
+
+.bloc-tabs{
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4vh;
+  margin-bottom:0;
+}
+
+.bloc-tabs button{
+  border: 3px solid #454b54;
+  background-color: #454b54;
+  color: #ffffff;
+  width: auto;
+  padding: 1%;
+  text-align: center;
+  border-radius: 10vh;
+  float: right;
+  font-size: 1em;
+  margin:0;
+  font-weight: bold;
+}
+
+.bloc-tabs button:hover{
+  cursor: pointer;
+  border: 3px solid #fff;
+  background-color: #454b54;
+  color: #ffffff;
+  width: auto;
+  padding: 1%;
+  text-align: center;
+  border-radius: 10vh;
+  float: right;
+  font-size: 1em;
+  margin:0;
+  font-weight: bold;
+}
+
 #description_submit:hover,
 #search_button:hover {
   cursor: pointer;
@@ -669,6 +760,11 @@ fieldset{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  color:#10393f;
+}
+.link_reg{
+  color:#10393f;
+  font-weight: bold;
 }
 .tags_display div {
   color: #ffffff;
@@ -748,7 +844,7 @@ fieldset{
   justify-content: space-evenly;
 }
 .picture_div div {
-  width: 23%;
+  width: 15%;
   text-align: center;
 }
 
@@ -883,6 +979,8 @@ fieldset{
 */
 /* index.html */
 
+
+
 .landing_img {
   margin-top: 6vh;
   margin-bottom: 0vh;
@@ -949,13 +1047,21 @@ fieldset{
   display: flex;
   width: 100%;
   justify-content: space-around;
+  
+}
+.home_btn_container a{
+  text-decoration: none;
+  width: 40%;
+  text-align: center;
+  color: #454b54;
 }
 .home_btn_container div {
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 .home_btn_container div img {
   width: 50%;
+  margin-bottom: 2vh;
 }
 .home_btn_container div img:hover,
 .home_btn_container div h3:hover {
@@ -976,6 +1082,20 @@ fieldset{
 .help_btn:hover {
   background-color: #f8f8f8;
   cursor: pointer;
+}
+
+.main_header_big{
+  text-align: left;
+}
+
+.main_header_big h1{
+  font-size: 8em;
+  margin:0;
+}
+
+.main_header_big h2{
+  font-size: 3em;
+  margin:0;
 }
 
 /* regulations_and_guidelines */
@@ -1013,10 +1133,12 @@ fieldset{
 }
 .projects_explanation{
   margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .last_blurb{
   padding-bottom: 3vh;
+
 }
 
 .top_search {
@@ -1717,6 +1839,7 @@ svg > g > g:last-child {
     .tags_display {
       width: auto;
       margin-right: 1em;
+      color:#10393f;
     }
     .tags_display div {
       margin-right: 1vw;
@@ -1727,6 +1850,11 @@ svg > g > g:last-child {
       margin-bottom: 1vh;
       border-radius: 50px;
       margin-left: 0.7em;
+      color:#10393f;
+    }
+    .tags_display a{
+      color:#10393f;
+      font-weight: bold;
     }
     .incident_form_navigation div {
       width: 30%;

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { json } from 'react-router-dom';
 
 function ProjectAnalysis(){
 
-  const [title_1, set_title] = useState(0);
-  const [summary_1, set_summary] = useState(0);
+  //const [title_1, set_title] = useState(0);
+  //const [summary_1, set_summary] = useState(0);
 
   const set_information = () => {
 
@@ -67,6 +68,8 @@ function ProjectAnalysis(){
 
 
     if (number_regulations !== 0 && incidents_container !== null){
+
+      
         for (var i = 0; i < number_regulations; i++) {
 
       
@@ -81,11 +84,8 @@ function ProjectAnalysis(){
       
           header.appendChild(header_txt);
       
-          var char_length = Math.round(
-            0.00015085686700459 * (window.innerWidth * window.innerHeight) + 148.6
-          );
-          var shortened =
-            reports_shuffled[i].summary;//.slice(0, char_length) + "...";
+          //var char_length = Math.round(0.00015085686700459 * (window.innerWidth * window.innerHeight) + 148.6);
+          var shortened = reports_shuffled[i].summary;//.slice(0, char_length) + "...";
       
           var paragraph = document.createElement("p");
           var paragraph_txt = document.createTextNode(shortened);
@@ -105,21 +105,27 @@ function ProjectAnalysis(){
       
           var b_id = "b" + i.toString();
       
-          var identification = reports_shuffled[i].incident_id;
-          var to_replace = `<div class="read_btns" id="b_id" onclick="set_incident(${identification})">Read More</div>`;
+          var identification = JSON.stringify(reports_shuffled[i]);
+          localStorage.setItem(b_id, identification);
+
+          const to_replace = `<div class="read_btns" id="b_id" onclick="localStorage.setItem('selected_b', ${i})"><a id="no_underline" href="regulations_and_guidelines_viewer">Read More</a></div>`;
           document.getElementById(b_id).innerHTML = to_replace;
-          
           console.log(b_id);
 
         }
       }
 
+      
+
       if (number_guidelines !== 0 && guidelines_container !== null){
-        for (var i = 0; i < number_guidelines; i++) {
+
+         for (var i = 0; i < number_guidelines; i++) {
 
       
           var incidents_item = document.createElement("div");
           incidents_item.classList.add("incidents_item");
+
+          
       
           var header = document.createElement("h2");
       
@@ -127,11 +133,8 @@ function ProjectAnalysis(){
       
           header.appendChild(header_txt);
       
-          var char_length = Math.round(
-            0.00015085686700459 * (window.innerWidth * window.innerHeight) + 148.6
-          );
-          var shortened =
-          reports_shuffled2[i].summary;//.slice(0, char_length) + "...";
+          //var char_length = Math.round(0.00015085686700459 * (window.innerWidth * window.innerHeight) + 148.6);
+          var shortened = reports_shuffled2[i].summary;//.slice(0, char_length) + "...";
       
           var paragraph = document.createElement("p");
           var paragraph_txt = document.createTextNode(shortened);
@@ -140,7 +143,7 @@ function ProjectAnalysis(){
           var btn_row = document.createElement("div");
           btn_row.classList.add("btn_row");
           var btn_r = document.createElement("div");
-          btn_r.id = "b2" + i.toString();
+          btn_r.id = "b" + i.toString();
           btn_row.appendChild(btn_r);
       
           incidents_item.appendChild(header);
@@ -149,11 +152,15 @@ function ProjectAnalysis(){
       
           guidelines_container.appendChild(incidents_item);
       
-          var b_id = "b2" + i.toString();
+          var b2_id = "b2" + i.toString();
       
-          var identification = reports_shuffled[i].incident_id;
-          var to_replace = `<div class="read_btns" id="b2_id" onclick="set_incident(${identification})">Read More</div>`;
-          document.getElementById(b_id).innerHTML = to_replace;
+          var identification2 = JSON.stringify(reports_shuffled2[i]);
+          localStorage.setItem(b2_id, identification2);
+
+          const to_replace2 = `<div class="read_btns" id="b2_id" onclick="localStorage.setItem('selected_b', ${i})"><a id="no_underline" href="regulations_and_guidelines_viewer">Read More</a></div>`;
+          //document.getElementById(b2_id).innerHTML = to_replace2;
+          //console.log(b2_id);
+
         }
       }
   }; // end of set_information 
@@ -167,14 +174,13 @@ function ProjectAnalysis(){
         <div class="inner_header">
   
   
-          <a href="home" class="header_img"
-            ><img
-              src="https://i.imgur.com/gUzP4ml.png"
-          /></a>
+          <a href="home" class="header_img" >
+            <img src="https://i.imgur.com/gUzP4ml.png" alt="logo"/>
+          </a>
   
   
           
-          <a href="regulations_and_guidelines" class="header_link header_page">Regulations and Guidelines</a>
+          <a href="regulations_and_guidelines" class="header_link header_page">Project Analysis</a>
           <a href="fairness_metrics" class="header_link">Fairness Metrics</a>
           <div class="header_spacer"></div>
           <a href="about" class="header_link">About</a>

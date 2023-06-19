@@ -59,11 +59,11 @@ function RegulationsGuidelines() {
       <div class="header">
         <div class="inner_header">
           <a href="home" class="header_img">
-          <img
+            <img
               src="https://i.imgur.com/gUzP4ml.png"
               alt="logo" />
           </a>
-          <a href="regulations_and_guidelines" class="header_link header_page">Regulations and Guidelines</a>
+          <a href="regulations_and_guidelines" class="header_link header_page">Project Analysis</a>
           <a href="fairness_metrics" class="header_link">Fairness Metrics</a>
           <div class="header_spacer"></div>
           <a href="about" class="header_link">About</a>
@@ -77,10 +77,11 @@ function RegulationsGuidelines() {
               Project Analysis - Input Form
             </h1>
             <p class="form_description">
-              Enter your project title and your project description, and then click on the Submit button.
-              AIthical will redirect you to a new page where you will be able to see Canadian
+              Enter your project title and your project description, and then click on the Submit button. 
+              
+              <br/><span id="green_logo">ai</span>thical will redirect you to a new page where you will be able to see Canadian
               legal regulations and guidelines that are relevant to your project.
-              To learn more about how AIthical works, read our <a href="about">About</a> section.
+              To learn more about how <span id="green_logo">ai</span>thical works, read our <a href="about">About</a> section.
             </p>
             <form id="incident_form" onSubmit={handleSubmit}>
               <div class="wage_sub">
@@ -89,14 +90,14 @@ function RegulationsGuidelines() {
                 </h2>
               </div>
               <div class="wage_inputs">
-                <div class="wage_spacer"></div>
+                <br/>
                 <div class="wage_group wage_full">
                   <h3>
                     Project Title
                   </h3>
                   <input type="text" id="project_title" name="company" placeholder="Enter your Project Title" />
                 </div>
-                <div class="wage_spacer"></div>
+                <br/>
                 <div class="wage_group wage_full">
                   <h3>
                     Project Description

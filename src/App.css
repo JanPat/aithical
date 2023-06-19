@@ -1047,13 +1047,21 @@ fieldset{
   display: flex;
   width: 100%;
   justify-content: space-around;
+  
+}
+.home_btn_container a{
+  text-decoration: none;
+  width: 40%;
+  text-align: center;
+  color: #454b54;
 }
 .home_btn_container div {
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 .home_btn_container div img {
   width: 50%;
+  margin-bottom: 2vh;
 }
 .home_btn_container div img:hover,
 .home_btn_container div h3:hover {

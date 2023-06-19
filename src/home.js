@@ -67,33 +67,37 @@ function Home() {
         </p>
       </div>
 
-      <div class="home_txt white">
+      <div class="home_txt white2">
         <h1>
-          our features
+          Our Features
         </h1>
         <p>
-          blablabla
+          <b>Project Analysis: </b> <span id="green_logo">ai</span>thical recommends relevant domain-specific Canadian legislation (regulations and guidelines) for your AI/ML projects.
         </p>
         <p>
-          blablabla
+          <b>Fairness Metrics: </b> <span id="green_logo">ai</span>thical’s repository of ethical AI frameworks will help ensure your project aligns with best practices.
         </p>
         <div class="home_btn_container">
+          <a href="regulations_and_guidelines">
           <div>
             <h3>
               Project Analysis
             </h3>
             <img
-              src="https://live.staticflickr.com/65535/50142406526_61df9590d4_o.png"
+              src="https://imgur.com/5tJUm9y.jpg"
             />
           </div>
+          </a>
+          <a href="fairness_metrics">
           <div>
             <h3>
               Fairness Metrics
             </h3>
             <img
-              src="https://live.staticflickr.com/65535/50153866971_4ba58b6bd2_o.png"
+              src="https://imgur.com/awtiyFE.jpg"
             />
           </div>
+          </a>
         </div>
       </div>
 

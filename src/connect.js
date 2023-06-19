@@ -12,7 +12,7 @@ function Connect(){
   };
 
   const LinkBonam = () => {
-    window.location.href = 'https://www.linkedin.com/';
+    window.location.href = 'https://www.linkedin.com/in/bonam-m-608510134/';
   };
 
   const LinkMaddie = () => {

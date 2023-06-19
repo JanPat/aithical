@@ -1,25 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-//import { useHistory } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
-
-
+import { json } from 'react-router-dom';
 
 function ProjectAnalysis(){
 
   //const [title_1, set_title] = useState(0);
   //const [summary_1, set_summary] = useState(0);
-  const navigate = useNavigate();
-
-  const handleButtonClick = (buttonId) => {
-    // Store button ID in localStorage
-    localStorage.setItem('buttonId', buttonId);
-
-    // Redirect to "regulations_and_guidelines_viewer" page
-    navigate('/regulations_and_guidelines_viewer');
-    //history.push('/regulations_and_guidelines_viewer');
-  };
 
   const set_information = () => {
 
@@ -79,11 +64,6 @@ function ProjectAnalysis(){
       console.log("guidelines container not found")
     }
 
-    const handleButtonClick = (ind) => {
-      localStorage.setItem('selected_b', ind);
-      console.log("worked")
-    };
-
 
 
 
@@ -128,19 +108,9 @@ function ProjectAnalysis(){
           var identification = JSON.stringify(reports_shuffled[i]);
           localStorage.setItem(b_id, identification);
 
-          //var to_replace = `<Link to "/regulations_and_guidelines_viewer"><div class="read_btns" id="b_id" onclick="localStorage.setItem('selected_b', ${i}); console.log(${i});"> Read 7 More </div></Link>`;
-
-          const to_replace = `<div class="read_btns" id="b_id" onclick="localStorage.setItem('selected_b', ${i}); console.log(${i});"> Read More </div>`;
-
+          const to_replace = `<div class="read_btns" id="b_id" onclick="localStorage.setItem('selected_b', ${i})"><a id="no_underline" href="regulations_and_guidelines_viewer">Read More</a></div>`;
           document.getElementById(b_id).innerHTML = to_replace;
-          
           console.log(b_id);
-
-          var tester = localStorage.getItem('selected_b');
-          console.log(tester);
-          console.log("blablabalbal")
-
-
 
         }
       }
@@ -148,43 +118,49 @@ function ProjectAnalysis(){
       
 
       if (number_guidelines !== 0 && guidelines_container !== null){
-        for (var j = 0; j < number_guidelines; j++) {
+
+         for (var i = 0; i < number_guidelines; i++) {
 
       
-          var incidents_item2 = document.createElement("div");
-          incidents_item2.classList.add("incidents_item");
+          var incidents_item = document.createElement("div");
+          incidents_item.classList.add("incidents_item");
+
+          
       
-          var header2 = document.createElement("h2");
+          var header = document.createElement("h2");
       
-          var header_txt2 = document.createTextNode(reports_shuffled2[j].title);
+          var header_txt = document.createTextNode(reports_shuffled2[i].title);
       
-          header2.appendChild(header_txt2);
+          header.appendChild(header_txt);
       
-          // var char_length2 = Math.round(0.00015085686700459 * (window.innerWidth * window.innerHeight) + 148.6);
-          var shortened2 =
-          reports_shuffled2[j].summary;//.slice(0, char_length2) + "...";
+          //var char_length = Math.round(0.00015085686700459 * (window.innerWidth * window.innerHeight) + 148.6);
+          var shortened = reports_shuffled2[i].summary;//.slice(0, char_length) + "...";
       
-          var paragraph2 = document.createElement("p");
-          var paragraph_txt2 = document.createTextNode(shortened2);
-          paragraph2.appendChild(paragraph_txt2);
+          var paragraph = document.createElement("p");
+          var paragraph_txt = document.createTextNode(shortened);
+          paragraph.appendChild(paragraph_txt);
       
-          var btn_row2 = document.createElement("div");
-          btn_row2.classList.add("btn_row");
-          var btn_r2 = document.createElement("div");
-          btn_r2.id = "b2" + i.toString();
-          btn_row2.appendChild(btn_r2);
+          var btn_row = document.createElement("div");
+          btn_row.classList.add("btn_row");
+          var btn_r = document.createElement("div");
+          btn_r.id = "b" + i.toString();
+          btn_row.appendChild(btn_r);
       
-          incidents_item2.appendChild(header2);
-          incidents_item2.appendChild(paragraph2);
-          incidents_item2.appendChild(btn_row2);
+          incidents_item.appendChild(header);
+          incidents_item.appendChild(paragraph);
+          incidents_item.appendChild(btn_row);
       
-          guidelines_container.appendChild(incidents_item2);
+          guidelines_container.appendChild(incidents_item);
       
-          //var b_id2 = "b2" + j.toString();
+          var b2_id = "b2" + i.toString();
       
-          //var identification = reports_shuffled2[j].incident_id;
-          //var to_replace2 = `<div class="read_btns" id="b2_id" onclick="console.log(5)">Read More</div>`;
-          //document.getElementById(b_id2).innerHTML = to_replace2;
+          var identification2 = JSON.stringify(reports_shuffled2[i]);
+          localStorage.setItem(b2_id, identification2);
+
+          const to_replace2 = `<div class="read_btns" id="b2_id" onclick="localStorage.setItem('selected_b', ${i})"><a id="no_underline" href="regulations_and_guidelines_viewer">Read More</a></div>`;
+          //document.getElementById(b2_id).innerHTML = to_replace2;
+          //console.log(b2_id);
+
         }
       }
   }; // end of set_information 

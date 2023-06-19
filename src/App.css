@@ -585,7 +585,10 @@ fieldset{
   display: block;
 } 
 
-
+#no_underline{
+  text-decoration: none;
+  color: white;
+}
 
 /*
 .eval_btn {
@@ -1122,10 +1125,12 @@ fieldset{
 }
 .projects_explanation{
   margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .last_blurb{
   padding-bottom: 3vh;
+
 }
 
 .top_search {

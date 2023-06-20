@@ -92,7 +92,7 @@ def classify_display(user_input):
     print("Starting to classify user input:", user_input)
 
     file_name = 'Summary-Regulations-Guidelines.csv'
-    categories = ['Autonomous Vehicle', 'Education', 'Healthcare', 'Agriculture', 'Environment', 'Finance']
+    categories = ['Autonomous Vehicle', 'Education', 'Healthcare', 'Agriculture', 'Finance']
 
     regulations_df, category_values = load_regulations(file_name)
     print("Regulations loaded and mapped to categories")
